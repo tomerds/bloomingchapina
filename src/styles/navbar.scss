@@ -1,0 +1,14 @@
+.navitem {
+  border-bottom: 1px black solid;
+}
+
+.navbar-container {
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
+  background: rgba(255, 255, 255, 0.97);
+}
+
+.buffer-container {
+  height: 50px;
+}

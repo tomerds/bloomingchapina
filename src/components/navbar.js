@@ -33,7 +33,7 @@ export default class NavBar extends React.Component {
                 <NavLink href="/">HOME</NavLink>
               </NavItem>
               <NavItem className='navitem'>
-                <NavLink href="/">SHOP</NavLink>
+                <NavLink href="/shop">SHOP</NavLink>
               </NavItem>
               <NavItem className='navitem'>
                 <NavLink href="https://www.instagram.com/bloomingchapinast/">INSTAGRAM</NavLink>

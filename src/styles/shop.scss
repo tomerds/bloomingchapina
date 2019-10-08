@@ -1,0 +1,32 @@
+.nothing-yet {
+  height: 30vh;
+  margin-top: 50px;
+}
+
+.follow-container{
+  display: flex;
+  justify-content: center;
+
+}
+
+.my-gallery-class {
+  margin: 0 auto;
+  
+}
+
+.shop-container {
+  width: 100%;
+
+}
+
+.image-container {
+  height: auto;
+  width: 150px;
+  height: auto;
+  margin: 10px;
+
+  img {
+    max-width:100%;
+
+  }
+}

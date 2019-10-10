@@ -10,7 +10,7 @@ class Contact extends React.Component {
         <h1>Contact us!</h1>
         <div className='contact-content'>
           <h4>We are still building our online shop but contact us directly for purchases and shipping information.</h4>
-          <a href="mailto:mirandanunez95@gmail.com"><span role="img" aria-label='email button'>📩</span></a>
+          <a href="mailto:bloomingchapina@gmail.com?cc= &subject=I'd%20like%20to%20make%20a%20purchase!"><span role="img" aria-label='email button'>📩</span></a>
         </div>
       </div>
     )

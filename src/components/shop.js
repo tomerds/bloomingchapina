@@ -95,15 +95,16 @@ const imagesLoadedOptions = { background: '.my-bg-image-el' }
 
 class Shop extends React.Component {
 
-
-
   render() {
 
     const imageChildren = items.map((item) => {
       return (
         <div className='image-container' >
-          <Link to={`/shop/${item.id}`}>
-            <img src={item.src} alt={item.altText} />
+          <Link to={`/shop/contact`}>
+            <div className='shop-image'>
+              <img src={item.src} alt={item.altText} />
+              <span>{item.name}</span>
+            </div>
           </Link>
         </div>
       )

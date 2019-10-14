@@ -3,24 +3,7 @@ import '../styles/carousel.scss';
 import React from 'react';
 import { Carousel, CarouselControl, CarouselItem } from 'reactstrap';
 
-import necklace1 from '../images/1C6E0E41-3E2E-498D-8F28-FB4DA0754098.JPG';
-import bag1 from '../images/71FAF340-464B-4B71-A694-E51E6A647DDF.JPG';
-import model1 from '../images/jumbomodel.png';
 
-const items = [
-  {
-    src: bag1,
-    altText: 'Necklace Model',
-  },
-  {
-    src: necklace1,
-    altText: 'Necklace',
-  },
-  {
-    src: model1,
-    altText: 'Bag Model',
-  }
-];
 
 class JumboCarousel extends React.Component {
 
@@ -42,19 +25,19 @@ class JumboCarousel extends React.Component {
 
   next() {
     if (this.animating) return;
-    const nextIndex = this.state.activeIndex === items.length - 1 ? 0 : this.state.activeIndex + 1;
+    const nextIndex = this.state.activeIndex === this.props.items.length - 1 ? 0 : this.state.activeIndex + 1;
     this.setState({ activeIndex: nextIndex });
   }
 
   previous() {
     if (this.animating) return;
-    const nextIndex = this.state.activeIndex === 0 ? items.length - 1 : this.state.activeIndex - 1;
+    const nextIndex = this.state.activeIndex === 0 ? this.props.items.length - 1 : this.state.activeIndex - 1;
     this.setState({ activeIndex: nextIndex });
   }
 
   render() {
     const { activeIndex } = this.state;
-    const slides = items.map((item) => {
+    const slides = this.props.items.map((item) => {
       return (
         <CarouselItem
           onExiting={this.onExiting}
@@ -68,6 +51,7 @@ class JumboCarousel extends React.Component {
 
     return (
       <div className='carousel-container'>
+
         <Carousel activeIndex={activeIndex}
           next={this.next}
           previous={this.previous}>

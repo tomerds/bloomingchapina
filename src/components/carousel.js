@@ -3,9 +3,9 @@ import '../styles/carousel.scss';
 import React from 'react';
 import { Carousel, CarouselControl, CarouselItem } from 'reactstrap';
 
-import necklace1 from '../images/1C6E0E41-3E2E-498D-8F28-FB4DA0754098.JPG';
-import bag1 from '../images/71FAF340-464B-4B71-A694-E51E6A647DDF.JPG';
-import model1 from '../images/jumbomodel.png';
+import necklace1 from '../lowQimages/1C6E0E41-3E2E-498D-8F28-FB4DA0754098 copy.JPG';
+import bag1 from '../lowQimages/71FAF340-464B-4B71-A694-E51E6A647DDF copy.JPG';
+import model1 from '../lowQimages/jumbomodel copy.png';
 
 const items = [
   {

@@ -4,17 +4,17 @@ import React from 'react';
 import Masonry from 'react-masonry-component';
 import { Link } from 'react-router-dom';
 
-import img1 from '../images/1E7C97DB-B725-4BB5-8154-71958753E907.JPG';
-import img2 from '../images/F0B16481-90A8-406E-AAF1-74F42B791546.JPG';
-import img3 from '../images/4BB98C82-CD74-41D5-8615-A207C66F3CFA.JPG';
-import img4 from '../images/6FBA9049-EA90-4FBF-BAE7-C8EE683ECC00.JPG';
-import img5 from '../images/7CEC7AC4-4C2F-4857-BC67-44FDFBA43E41.JPG';
-import img6 from '../images/DA526DA4-4F37-4B8F-819D-9DE9A5F6BE92.JPG';
-import img7 from '../images/EC62BCAE-EE8D-4224-9328-CFCFF117E5B3.JPG';
-import img8 from '../images/F0F02AF9-D1D8-4C41-81C7-6F9DEF99B929.JPG';
-import img9 from '../images/F1918FDB-18BB-43BA-B0E2-E653A100F645.JPG';
-import img10 from '../images/Facetune_04-10-2019-13-43-52.JPG';
-import img11 from '../images/Facetune_04-10-2019-13-49-55.JPG';
+import img1 from '../lowQimages/1E7C97DB-B725-4BB5-8154-71958753E907 copy.JPG';
+import img2 from '../lowQimages/F0B16481-90A8-406E-AAF1-74F42B791546 copy.JPG';
+import img3 from '../lowQimages/4BB98C82-CD74-41D5-8615-A207C66F3CFA copy.JPG';
+import img4 from '../lowQimages/6FBA9049-EA90-4FBF-BAE7-C8EE683ECC00 copy.JPG';
+import img5 from '../lowQimages/7CEC7AC4-4C2F-4857-BC67-44FDFBA43E41 copy.JPG';
+import img6 from '../lowQimages/DA526DA4-4F37-4B8F-819D-9DE9A5F6BE92 copy.JPG';
+import img7 from '../lowQimages/EC62BCAE-EE8D-4224-9328-CFCFF117E5B3 copy.JPG';
+import img8 from '../lowQimages/F0F02AF9-D1D8-4C41-81C7-6F9DEF99B929 copy.JPG';
+import img9 from '../lowQimages/F1918FDB-18BB-43BA-B0E2-E653A100F645 copy.JPG';
+import img10 from '../lowQimages/Facetune_04-10-2019-13-43-52 copy.JPG';
+import img11 from '../lowQimages/Facetune_04-10-2019-13-49-55 copy.JPG';
 
 const items = [
   {

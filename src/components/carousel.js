@@ -61,6 +61,7 @@ class JumboCarousel extends React.Component {
           onExited={this.onExited}
           key={item.src}
         >
+
           <img src={item.src} alt={item.altText} />
         </CarouselItem>
       );

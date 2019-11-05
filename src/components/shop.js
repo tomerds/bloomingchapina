@@ -3,6 +3,7 @@ import '../styles/shop.scss'
 import React from 'react';
 import Masonry from 'react-masonry-component';
 import { Link } from 'react-router-dom';
+import LazyLoad from 'react-lazy-load';
 
 import img1 from '../lowQimages/1E7C97DB-B725-4BB5-8154-71958753E907 copy.JPG';
 import img2 from '../lowQimages/F0B16481-90A8-406E-AAF1-74F42B791546 copy.JPG';
@@ -99,14 +100,16 @@ class Shop extends React.Component {
 
     const imageChildren = items.map((item) => {
       return (
-        <div className='image-container' >
-          <Link to={`/shop/contact`}>
-            <div className='shop-image'>
-              <img src={item.src} alt={item.altText} />
-              <span>{item.name}</span>
-            </div>
-          </Link>
-        </div>
+        <LazyLoad>
+          <div className='image-container' >
+            <Link to={`/shop/contact`}>
+              <div className='shop-image'>
+                <img src={item.src} alt={item.altText} />
+                <span>{item.name}</span>
+              </div>
+            </Link>
+          </div>
+        </LazyLoad>
       )
     });
 

@@ -34,7 +34,7 @@
 
 .shop-image {
   position: relative;
-  color: white;
+  color: rgba(255, 255, 255, 0.692);
 
   span {
     width: 100%;
@@ -46,6 +46,7 @@
     position:absolute;
     bottom:0;
     padding-left: 5px;
+    font-size: 10px;
 
   }
 
@@ -55,10 +56,10 @@
 
 }
 
-.hide {
+.hide-images {
   display: none;
 }
 
-.show {
+.show-images {
   display: flex;
 }

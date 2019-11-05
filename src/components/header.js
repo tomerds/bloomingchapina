@@ -3,7 +3,7 @@ import '../styles/header.scss';
 import React from 'react';
 
 import blooming from '../images/blooming.png';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 class Header extends React.Component {
 
@@ -17,8 +17,22 @@ class Header extends React.Component {
         </div>
         <div className='links-container'>
           <ul className='links-list'>
-            <Link to='/shop'><li>SHOP</li></Link>
-            <Link to='/follow'><li>FOLLOW</li></Link>
+            <NavLink to='/shop'
+              activeStyle={{
+                fontWeight: "bold",
+                color: "rgba(211, 105, 95, 1)"
+              }}
+              className='navlink'>
+              <li>SHOP</li>
+            </NavLink>
+            <NavLink to='/follow'
+              activeStyle={{
+                fontWeight: "bold",
+                color: "rgba(211, 105, 95, 1)"
+              }}
+              className='navlink'>
+              <li>FOLLOW</li>
+            </NavLink>
           </ul>
         </div>
       </div>

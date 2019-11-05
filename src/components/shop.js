@@ -3,7 +3,6 @@ import '../styles/shop.scss'
 import React from 'react';
 import Masonry from 'react-masonry-component';
 import { Link } from 'react-router-dom';
-import LazyLoad from 'react-lazy-load';
 
 import img1 from '../lowQimages/1E7C97DB-B725-4BB5-8154-71958753E907 copy.JPG';
 import img2 from '../lowQimages/F0B16481-90A8-406E-AAF1-74F42B791546 copy.JPG';
@@ -20,24 +19,28 @@ import img11 from '../lowQimages/Facetune_04-10-2019-13-49-55 copy.JPG';
 const items = [
   {
     src: img1,
+    tag: 'img1',
     altText: 'Necklace Model',
     name: 'Lilac 0101',
     id: 1
   },
   {
     src: img2,
+    tag: 'img2',
     altText: 'Necklace Model',
     name: 'Lilac 0101',
     id: 1
   },
   {
     src: img3,
+    tag: 'img3',
     altText: 'Necklace',
     name: 'Daisy 0101',
     id: 2
   },
   {
     src: img4,
+    tag: 'img4',
     altText: 'Bag Model',
     name: 'pre-release',
     id: 3
@@ -45,42 +48,49 @@ const items = [
   },
   {
     src: img5,
+    tag: 'img5',
     altText: 'Bag Model',
     name: 'pre-release',
     id: 3
   },
   {
     src: img6,
+    tag: 'img6',
     altText: 'Bag Model',
     name: 'pre-release',
     id: 3
   },
   {
     src: img7,
+    tag: 'img7',
     altText: 'Bag Model',
     name: 'pre-release',
     id: 3
   },
   {
     src: img8,
+    tag: 'img8',
     altText: 'Bag Model',
     name: 'pre-release',
     id: 3
   },
   {
     src: img9,
+    tag: 'img9',
     altText: 'Bag Model',
     name: 'pre-release',
     id: 3
   },
   {
     src: img10,
+    tag: 'img10',
     altText: 'Necklace Model 2',
     name: 'pre-release',
     id: 4
   },
   {
     src: img11,
+    tag: 'img11',
     altText: 'Necklace Model 2',
     name: 'pre-release',
     id: 4
@@ -96,35 +106,56 @@ const imagesLoadedOptions = { background: '.my-bg-image-el' }
 
 class Shop extends React.Component {
 
+  constructor(props) {
+    super(props);
+    this.state = {
+      loadedCount: 0,
+      loaded: false,
+    }
+  }
+
+  onLoad = () => {
+    this.setState(prevState => {
+      if (this.loadedCount === items.length) {
+        console.log(this.loadedCount)
+        return { loaded: true }
+      }
+      return { loadedCount: prevState.loadedCount + 1 };
+    })
+  }
+
+
+
   render() {
 
     const imageChildren = items.map((item) => {
       return (
-        <LazyLoad>
-          <div className='image-container' >
-            <Link to={`/shop/contact`}>
-              <div className='shop-image'>
-                <img src={item.src} alt={item.altText} />
-                <span>{item.name}</span>
-              </div>
-            </Link>
-          </div>
-        </LazyLoad>
+        <div className='image-container' >
+          <Link to={`/shop/contact`}>
+            <div className='shop-image'>
+              <img src={item.src} alt={item.altText} onLoad={this.onLoad} />
+              <span>{item.name}</span>
+            </div>
+          </Link>
+        </div>
       )
     });
 
     return (
       <div className='shop-container'>
-        <Masonry
-          className={'my-gallery-class'} // default ''
-          elementType={'div'} // default 'div'
-          options={masonryOptions} // default {}
-          disableImagesLoaded={false} // default false
-          updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
-          imagesLoadedOptions={imagesLoadedOptions}
-        >
-          {imageChildren}
-        </Masonry>
+        <div className={this.loaded = false ? 'show' : 'hide'}><h1>Loading</h1></div>
+        <div className={this.loaded = false ? 'hide' : 'show'}>
+          <Masonry
+            className={'my-gallery-class'} // default ''
+            elementType={'div'} // default 'div'
+            options={masonryOptions} // default {}
+            disableImagesLoaded={false} // default false
+            updateOnEachImageLoad={false} // default false and works only if disableImagesLoaded is false
+            imagesLoadedOptions={imagesLoadedOptions}
+          >
+            {imageChildren}
+          </Masonry>
+        </div>
       </div>
     )
   }

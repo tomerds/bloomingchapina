@@ -1,5 +1,8 @@
 .carousel-container  {
   width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+
 
   img {
     width: 100%;
@@ -7,21 +10,3 @@
   }
 }
 
-@media (min-width: 768px) {
-  
-  //CSS
-  .carousel-container  {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  
-    img {
-      width: 100%;
-      height: auto;
-      padding: 0 200px;
-      max-width: 12000px;
-
-    }
-  }
-  
-}

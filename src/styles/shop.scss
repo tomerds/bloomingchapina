@@ -20,6 +20,7 @@
 
 }
 
+
 .image-container {
   height: auto;
   width: 150px;
@@ -62,4 +63,24 @@
 
 .show-images {
   display: flex;
+}
+
+
+@media (min-width: 768px) {
+  
+  //CSS
+  .shop-container {
+    width: 100%;
+    padding: 0 20%;
+  
+  }
+
+  .image-container {
+    width: 300px;
+  }
+
+  .shop-image-span { 
+    font-size: 15px !important;
+  }
+  
 }

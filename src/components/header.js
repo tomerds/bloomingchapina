@@ -17,7 +17,7 @@ class Header extends React.Component {
         </div>
         <div className='links-container'>
           <ul className='links-list'>
-            <NavLink to='/shop'
+            <NavLink exact to='/shop'
               activeStyle={{
                 fontWeight: "bold",
                 color: "rgba(211, 105, 95, 1)"

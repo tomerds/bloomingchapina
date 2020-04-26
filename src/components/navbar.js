@@ -30,22 +30,22 @@ export default class NavBar extends React.Component {
           <NavbarToggler onClick={this.toggleNavbar} className="mr-2" style={{ border: 'black solid 1px', borderRadius: '0', color: 'black' }} />
           <Collapse isOpen={!this.state.collapsed} navbar>
             <Nav navbar >
-              <NavLink className='navitem-link' to="/">
+              <NavLink className='navitem-link' to="/" onClick={this.toggleNavbar}>
                 <NavItem className='navitem'>
                   HOME
                 </NavItem>
               </NavLink>
-              <NavLink className='navitem-link' to="/shop">
+              <NavLink className='navitem-link' to="/shop" onClick={this.toggleNavbar}>
                 <NavItem className='navitem'>
                   SHOP
                 </NavItem>
               </NavLink>
-              <a className='navitem-link' href="https://www.instagram.com/bloomingchapinast/">
+              <a className='navitem-link' href="https://www.instagram.com/bloomingchapinast/" onClick={this.toggleNavbar}>
                 <NavItem className='navitem'>
                   INSTAGRAM
                 </NavItem>
               </a>
-              <a className='navitem-link' href="https://www.facebook.com/𝐁𝐥𝐨𝐨𝐦𝐢𝐧𝐠-𝑪𝒉𝒂𝒑𝒊𝒏𝒂-104446820966124/">
+              <a className='navitem-link' href="https://www.facebook.com/𝐁𝐥𝐨𝐨𝐦𝐢𝐧𝐠-𝑪𝒉𝒂𝒑𝒊𝒏𝒂-104446820966124/" onClick={this.toggleNavbar}>
                 <NavItem className='navitem'>
                   FACEBOOK
               </NavItem>
